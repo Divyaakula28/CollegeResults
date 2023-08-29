@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- ... your head content ... -->
+</head>
+<body>
+    {% if result %}
+    <table>
+        <thead>
+            <tr>
+                <th>HTNO</th>
+                <th>credits</th>
+                <th>rank</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in result %}
+            <tr>
+                <td>{{ row.htno }}</td>
+                <td>{{ row.grade }}</td>
+                <td>{{ row.rank }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No data available.</p>
+{% endif %}
+
+
+</body>
+</html>

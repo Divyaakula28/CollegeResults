@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Student Information</title>
+  </head>
+  <body>
+    <h1>Employee List:</h1>
+    {% if fT %}
+    <table>
+      <thead>
+        <th>htno</th>
+        <th>subcode</th>
+        <th>subname</th>
+        <th>grade</th>
+        <th>credits</th>
+      </thead>
+      {% for emp in fT %}
+      <tr>
+        <td>{{emp.htno}}</td>
+        <td>{{emp.subcode}}</td>
+        <td>{{emp.subname}}</td>
+        <td>{{emp.grade}}</td>       
+        <td>{{emp.credits}}</td>
+
+      </tr>
+      {% endfor %}
+    </table>
+    {%else%}
+    <p>No records found</p>
+    {% endif %}
+
+    
+
+  </body>
+</html>
